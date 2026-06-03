@@ -1,0 +1,29 @@
+model_family,sample_id,sample_type,answer_text,has_stage1_ab_mask,clean_exact_answer,decoded_changed,rank_delta_wrong_minus_clean,target_logit_drop_clean_minus_wrong,strong_case_score,annotation_priority,question_text
+gemma,okvqa_val_258605,comparison_reasoning,cook,1,0,1,139091.0,28.59375,6990.14375,already_annotated,What is this room mostly used for?
+gemma,okvqa_val_4131725,text_object_binding,no left turn,0,0,1,125661.0,23.96875,6314.01875,medium,What does the white sign with the arrow mean?
+gemma,okvqa_val_2847255,text_object_binding,china,0,1,1,91804.0,45.296875,4642.496875,high,What country might this be based on the writing on the bus?
+gemma,okvqa_val_00497,local_context_inference,surfer,0,0,1,84899.0,17.5390625,4269.4890625,medium,Who invented this kind of suit?
+gemma,okvqa_val_03909,comparison_reasoning,bat helmet,0,0,1,59821.0,12.109375,3010.159375,medium,Which type of helmet is used by the sport person shown in this picture?
+gemma,okvqa_val_00893,relation_reasoning,electricity,1,0,1,28242.0,18.75,1437.8500000000001,already_annotated,How does this train run?
+gemma,okvqa_val_02108,relation_reasoning,richard trevithick,1,0,1,26900.0,8.71875,1360.71875,already_annotated,Who invented the transportation device in this picture?
+gemma,okvqa_val_00310,relation_reasoning,view,1,0,1,22214.0,2.34375,1120.04375,already_annotated,How do we know that this bathroom is probably in a high rise building?
+gemma,okvqa_val_01256,comparison_reasoning,williams,1,0,1,21164.0,8.1875,1073.3875,already_annotated,Which fashion conscious sisters are famous for playing this game?
+qwen,okvqa_val_1295955,text_object_binding,protest,1,0,1,20499.0,7.796875,1039.746875,already_annotated,Why would this person be holding this sign?
+gemma,okvqa_val_4999035,text_object_binding,flower,0,0,1,20175.0,20.34375,1036.09375,medium,What are the designs in the grass likely made out of?
+gemma,okvqa_val_01692,relation_reasoning,leaf,0,0,1,10002.0,8.875,515.975,medium,What do these animals eat?
+gemma,okvqa_val_1295955,text_object_binding,protest,1,0,1,9168.0,5.6875,471.08750000000003,already_annotated,Why would this person be holding this sign?
+qwen,okvqa_val_258605,comparison_reasoning,cook,1,0,1,4341.0,11.25,235.3,already_annotated,What is this room mostly used for?
+qwen,okvqa_val_01692,relation_reasoning,leaf,0,0,1,4000.0,7.6875,214.6875,medium,What do these animals eat?
+gemma,okvqa_val_03189,local_context_inference,balance,0,0,1,3998.0,1.625,208.525,medium,What is the purpose of the fin on the pink surfboard?
+gemma,okvqa_val_01162,local_context_inference,tony hawk,0,1,1,3467.0,26.375,206.72500000000002,high,Who is famous for this?
+qwen,okvqa_val_00893,relation_reasoning,electricity,1,0,1,3076.0,12.609375,173.409375,already_annotated,How does this train run?
+qwen,okvqa_val_01162,local_context_inference,tony hawk,0,0,1,2394.0,7.78125,134.48125,medium,Who is famous for this?
+qwen,okvqa_val_00310,relation_reasoning,view,1,0,1,2304.0,7.625,129.825,already_annotated,How do we know that this bathroom is probably in a high rise building?
+gemma,okvqa_val_01938,local_context_inference,bmw,0,0,1,1739.0,8.375,102.325,medium,Name the bike model shown in this picture?
+gemma,okvqa_val_00492,local_context_inference,sail,1,0,1,1793.0,3.0,99.65,already_annotated,What type of boat is this?
+qwen,okvqa_val_03127,comparison_reasoning,pelican,0,1,1,1441.0,11.34375,90.39375,high,Which animal shown is closely associated with roof nests and holland?
+gemma,okvqa_val_02363,local_context_inference,horse,0,0,1,1337.0,16.125,89.97500000000001,medium,These animals are closely related to what american animal?
+qwen,okvqa_val_00497,local_context_inference,surfer,0,0,1,1588.0,0.171875,86.571875,medium,Who invented this kind of suit?
+qwen,okvqa_val_4999035,text_object_binding,flower,0,0,0,1372.0,4.71875,76.31875000000001,medium,What are the designs in the grass likely made out of?
+qwen,okvqa_val_01199,relation_reasoning,wood,1,0,1,875.0,4.625,55.375,already_annotated,What is the typical habitat for these animals?
+qwen,okvqa_val_03909,comparison_reasoning,bat helmet,0,0,1,844.0,2.3125,51.5125,medium,Which type of helmet is used by the sport person shown in this picture?

@@ -26,6 +26,42 @@ Full `mask_full_v1` summary:
 
 Interpretation: this smoke is valuable precisely because it separates two Paper2 populations. Wrong-image sensitivity alone does not guarantee a compositional two-region mechanism. Some behavior-strong cases are genuinely multi-evidence, while others are one-region dominated. Paper2 should therefore use mask composition as a sample filter before claiming multi-region evidence routing.
 
+## Stage1 No-Annotation Follow-up
+
+We added a Stage1 follow-up that reuses existing behavior and mask-composition outputs only. It does not require new annotation or GPU time.
+
+Outputs:
+
+- `stage1/paper2_stage1_no_annotation_followups_v1_threshold_sweep.csv`
+- `stage1/paper2_stage1_no_annotation_followups_v1_sample_stability.csv`
+- `stage1/paper2_stage1_no_annotation_followups_v1_annotation_candidates.csv`
+- `stage1/paper2_stage1_no_annotation_followups_v1_decision.json`
+
+Main readout:
+
+| item | value |
+|---|---:|
+| existing composition rows | 30 |
+| robust multi-evidence model-sample rows | 5 |
+| robust Gemma rows | 3 |
+| robust Qwen rows | 2 |
+| high-priority unannotated cases | 3 |
+| medium-priority unannotated cases | 13 |
+
+Threshold sweep shows the current multi-evidence labels are sensitive to stricter margin thresholds: under the loosest setting Gemma/Qwen each have 4 supported rows, but under stricter settings this drops quickly. This confirms that Stage1 is currently useful for triage, not yet enough for a broad Paper2 mechanism claim.
+
+The strongest no-new-annotation conclusion is:
+
+> Existing Stage1 data can identify a small robust multi-evidence subset and a larger annotation queue, but Paper2 needs more A/B annotations before model-level claims about compositional evidence routing are safe.
+
+High-priority annotation candidates:
+
+| model | sample | type | answer | reason |
+|---|---|---|---|---|
+| Gemma | `okvqa_val_2847255` | text_object_binding | china | clean exact answer and strong wrong-image sensitivity |
+| Gemma | `okvqa_val_01162` | local_context_inference | tony hawk | clean exact answer and strong wrong-image sensitivity |
+| Qwen | `okvqa_val_03127` | comparison_reasoning | pelican | clean exact answer and strong wrong-image sensitivity |
+
 ## Stage2 Hidden-Lens Mechanism Smoke
 
 The first common-case smoke used two samples shared by Gemma/Qwen strong-case lists: `okvqa_val_258605` and `okvqa_val_00893`.

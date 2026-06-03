@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-06-03 13:57:19",
+  "status": "paper2_stage1_no_annotation_followups_ready",
+  "tag": "no_annotation_followups_v1",
+  "inputs": {
+    "composition_rows": 30,
+    "strong_rows": 16,
+    "paired_rows": 80
+  },
+  "robust_multi_evidence_rows": 5,
+  "robust_multi_evidence_by_model": {
+    "gemma": 3,
+    "qwen": 2
+  },
+  "annotation_needed_high": 3,
+  "annotation_needed_medium": 13,
+  "next_action": "annotate_more_high_priority_cases",
+  "outputs": {
+    "threshold_sweep": "E:\\Bridging\\paper2_compositional_evidence_routing\\doc\\experiments\\paper2\\stage1\\paper2_stage1_no_annotation_followups_v1_threshold_sweep.csv",
+    "sample_stability": "E:\\Bridging\\paper2_compositional_evidence_routing\\doc\\experiments\\paper2\\stage1\\paper2_stage1_no_annotation_followups_v1_sample_stability.csv",
+    "annotation_candidates": "E:\\Bridging\\paper2_compositional_evidence_routing\\doc\\experiments\\paper2\\stage1\\paper2_stage1_no_annotation_followups_v1_annotation_candidates.csv"
+  }
+}

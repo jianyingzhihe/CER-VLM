@@ -1,0 +1,9 @@
+model_family,margin_threshold,random_gap,n,multi_evidence_supported,one_region_dominated,shortcut_prior_suspected,mixed_or_unclear,blocked
+gemma,0.05,0.05,15,4,7,3,0,1
+qwen,0.05,0.05,15,4,9,2,0,0
+gemma,1.0,1.0,15,3,7,4,0,1
+qwen,1.0,1.0,15,2,8,3,2,0
+gemma,2.0,1.0,15,1,9,4,0,1
+qwen,2.0,1.0,15,0,10,4,1,0
+gemma,5.0,2.0,15,0,9,5,0,1
+qwen,5.0,2.0,15,0,10,5,0,0

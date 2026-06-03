@@ -27,6 +27,13 @@ Stage1 mask composition full:
 - Gemma: 1 multi-evidence, 7 one-region dominated, 3 shortcut/prior, 3 mixed, 1 blocked.
 - Qwen: 3 multi-evidence, 9 one-region dominated, 2 shortcut/prior, 1 mixed, 0 blocked.
 
+Stage1 no-annotation follow-up:
+
+- Reanalyzed existing Stage1 outputs under multiple margin/random-control thresholds.
+- Robust multi-evidence model-sample rows across threshold settings: 5 total, with 3 Gemma rows and 2 Qwen rows.
+- The supported set shrinks quickly under stricter thresholds, so the current Stage1 data is best treated as sample triage rather than final sample coverage.
+- High-priority unannotated cases are `okvqa_val_2847255` and `okvqa_val_01162` for Gemma, plus `okvqa_val_03127` for Qwen.
+
 Stage2 hidden-lens bridge:
 
 - Gemma: hidden restore target effect is positive for both multi-evidence and one-region-dominated cases.
@@ -59,7 +66,7 @@ Recommended next experiment:
 
 - For Gemma, run compact PLT/source-route or fixed-node route-level probe on `okvqa_val_1295955`; keep it case-level unless more Gemma A/B-supported samples are identified.
 - For Qwen, optionally expand from layers 13/15/17 to a few additional layers only if the Paper2 mechanism section needs a stronger appendix table.
-- Annotation expansion is still the highest-value next step: current Gemma has only one supported case, so model-level Paper2 claims would be sample-limited.
+- Annotation expansion is still the highest-value next step: current Gemma has only one supported case under the original label, and only a small robust multi-evidence subset survives stricter threshold sweeps. Start with `okvqa_val_2847255`, `okvqa_val_01162`, and `okvqa_val_03127`.
 
 ## Boundary
 
