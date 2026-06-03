@@ -22,5 +22,9 @@ graph_files/
 graphs*/
 *.log
 
+# Local annotation workspaces and image/mask assets are not archived in Git.
+# Keep scripts that build/export them under scripts/.
+annotation/
+
 .DS_Store
 Thumbs.db

@@ -1,2 +1,0 @@
-sample_id,question,image_path,gold_answer,notes
-okvqa_val_1295955,Why would this person be holding this sign? Reply exactly in the format: The answer is <short answer>.,E:\Bridging\paper2_compositional_evidence_routing\annotation\stage3_gemma_source_route_assets_v1\images\paper2_mechanism_rank50_v1\COCO_val2014_000000129595__mask_A.jpg,protest,answer=protest

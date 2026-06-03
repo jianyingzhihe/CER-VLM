@@ -108,9 +108,85 @@ def _page(rows: list[dict[str, Any]]) -> str:
 """
 
 
+def _write_labelme_helpers(out_dir: Path) -> None:
+    (out_dir / "launch_labelme.ps1").write_text(
+        "\n".join(
+            [
+                "$packDir = Split-Path -Parent $MyInvocation.MyCommand.Path",
+                '$imagesDir = Join-Path $packDir "images"',
+                '$pythonExe = "E:\\code\\conda\\python.exe"',
+                "",
+                "if (-not (Test-Path $pythonExe)) {",
+                '  $pythonExe = "python"',
+                "}",
+                "",
+                'Write-Host "Launching LabelMe on $imagesDir"',
+                'Write-Host "Use labels: region_A and region_B"',
+                'Start-Process -FilePath $pythonExe -ArgumentList @("-m", "labelme", $imagesDir)',
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (out_dir / "export_labelme_masks.ps1").write_text(
+        "\n".join(
+            [
+                "$packDir = Split-Path -Parent $MyInvocation.MyCommand.Path",
+                "$repoRoot = Resolve-Path (Join-Path $packDir \"..\\..\")",
+                '$script = Join-Path $repoRoot "scripts\\local\\export_paper2_followup_labelme_masks.py"',
+                '$pythonExe = "E:\\code\\conda\\python.exe"',
+                "",
+                "if (-not (Test-Path $pythonExe)) {",
+                '  $pythonExe = "python"',
+                "}",
+                "",
+                'Write-Host "Exporting LabelMe JSON to masks under $packDir\\exported_masks"',
+                "& $pythonExe $script --pack-dir $packDir",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (out_dir / "README_LABELME.md").write_text(
+        "\n".join(
+            [
+                "# Paper2 Follow-up LabelMe Annotation",
+                "",
+                "## Start",
+                "",
+                "```powershell",
+                "powershell -ExecutionPolicy Bypass -File .\\launch_labelme.ps1",
+                "```",
+                "",
+                "## Labels",
+                "",
+                "Use exactly two labels:",
+                "",
+                "- `region_A`: first necessary evidence region.",
+                "- `region_B`: second necessary evidence region.",
+                "",
+                "The exporter also accepts old aliases:",
+                "",
+                "- `answer` -> `region_A`",
+                "- `relate` -> `region_B`",
+                "",
+                "## Export Masks",
+                "",
+                "```powershell",
+                "powershell -ExecutionPolicy Bypass -File .\\export_labelme_masks.ps1",
+                "```",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build Paper2 Stage1 A/B follow-up annotation pack.")
     parser.add_argument("--include-medium", action="store_true", help="Include medium-priority candidates in the UI.")
+    parser.add_argument(
+        "--include-already-annotated",
+        action="store_true",
+        help="Also include candidates that already have masks, useful for reliability/re-annotation.",
+    )
     parser.add_argument("--out-name", default="stage1_followup_ab_evidence_pack_v2")
     args = parser.parse_args()
 
@@ -119,7 +195,12 @@ def main() -> int:
     image_index = _image_index()
     high = [r for r in rows if r.get("annotation_priority") == "high"]
     medium = [r for r in rows if r.get("annotation_priority") == "medium"]
-    selected = high + medium if args.include_medium else high
+    already = [r for r in rows if r.get("annotation_priority") == "already_annotated"]
+    selected = list(high)
+    if args.include_medium:
+        selected.extend(medium)
+    if args.include_already_annotated:
+        selected.extend(already)
     out_rows: list[dict[str, Any]] = []
     missing: list[str] = []
     image_dir = out_dir / "images"
@@ -167,14 +248,19 @@ def main() -> int:
     _write_csv(out_dir / "stage1_followup_annotation_blank.csv", out_rows, fields)
     _write_csv(out_dir / "stage1_followup_medium_priority_candidates.csv", medium, list(medium[0].keys()) if medium else [])
     (out_dir / "stage1_followup_annotation_ui.html").write_text(_page(out_rows), encoding="utf-8")
+    _write_labelme_helpers(out_dir)
     decision = {
         "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "status": "paper2_stage1_followup_annotation_pack_ready" if out_rows else "blocked_missing_images",
         "include_medium": args.include_medium,
         "high_priority_rows": sum(1 for row in out_rows if row.get("annotation_priority") == "high"),
         "selected_medium_rows": sum(1 for row in out_rows if row.get("annotation_priority") == "medium"),
+        "selected_already_annotated_rows": sum(
+            1 for row in out_rows if row.get("annotation_priority") == "already_annotated"
+        ),
         "selected_rows": len(selected),
         "medium_priority_rows": len(medium),
+        "already_annotated_rows": len(already),
         "missing": missing,
         "output_dir": str(out_dir),
     }
