@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-06-03 15:11:10",
+  "status": "paper2_stage1_followup_annotation_pack_ready",
+  "include_medium": true,
+  "high_priority_rows": 3,
+  "selected_medium_rows": 13,
+  "selected_rows": 16,
+  "medium_priority_rows": 13,
+  "missing": [],
+  "output_dir": "E:\\Bridging\\paper2_compositional_evidence_routing\\annotation\\stage1_followup_ab_evidence_pack_v2_expanded"
+}

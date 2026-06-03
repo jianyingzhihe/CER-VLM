@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import csv
+import argparse
 import html
 import json
 import shutil
@@ -13,7 +14,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[2]
 ANNOTATION = ROOT / "annotation"
 STAGE1 = ROOT / "doc" / "experiments" / "paper2" / "stage1"
-OUT = ANNOTATION / "stage1_followup_ab_evidence_pack_v2"
+DEFAULT_OUT = ANNOTATION / "stage1_followup_ab_evidence_pack_v2"
 SOURCE = STAGE1 / "paper2_stage1_no_annotation_followups_v1_annotation_candidates.csv"
 IMAGE_INDEX_SOURCES = [
     STAGE1 / "stage1_composition_screen_viability_v1_gemma.csv",
@@ -108,15 +109,22 @@ def _page(rows: list[dict[str, Any]]) -> str:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Build Paper2 Stage1 A/B follow-up annotation pack.")
+    parser.add_argument("--include-medium", action="store_true", help="Include medium-priority candidates in the UI.")
+    parser.add_argument("--out-name", default="stage1_followup_ab_evidence_pack_v2")
+    args = parser.parse_args()
+
+    out_dir = ANNOTATION / args.out_name
     rows = _read_csv(SOURCE)
     image_index = _image_index()
     high = [r for r in rows if r.get("annotation_priority") == "high"]
     medium = [r for r in rows if r.get("annotation_priority") == "medium"]
+    selected = high + medium if args.include_medium else high
     out_rows: list[dict[str, Any]] = []
     missing: list[str] = []
-    image_dir = OUT / "images"
-    mask_root = OUT / "exported_masks"
-    for row in high:
+    image_dir = out_dir / "images"
+    mask_root = out_dir / "exported_masks"
+    for row in selected:
         image_filename = image_index.get(row["sample_id"], "")
         image = _find_image(row["sample_id"], image_filename)
         if image is None:
@@ -156,18 +164,21 @@ def main() -> int:
         "region_A_union_B_mask_path",
         "annotation_status",
     ]
-    _write_csv(OUT / "stage1_followup_annotation_blank.csv", out_rows, fields)
-    _write_csv(OUT / "stage1_followup_medium_priority_candidates.csv", medium, list(medium[0].keys()) if medium else [])
-    (OUT / "stage1_followup_annotation_ui.html").write_text(_page(out_rows), encoding="utf-8")
+    _write_csv(out_dir / "stage1_followup_annotation_blank.csv", out_rows, fields)
+    _write_csv(out_dir / "stage1_followup_medium_priority_candidates.csv", medium, list(medium[0].keys()) if medium else [])
+    (out_dir / "stage1_followup_annotation_ui.html").write_text(_page(out_rows), encoding="utf-8")
     decision = {
         "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "status": "paper2_stage1_followup_annotation_pack_ready" if out_rows else "blocked_missing_images",
-        "high_priority_rows": len(out_rows),
+        "include_medium": args.include_medium,
+        "high_priority_rows": sum(1 for row in out_rows if row.get("annotation_priority") == "high"),
+        "selected_medium_rows": sum(1 for row in out_rows if row.get("annotation_priority") == "medium"),
+        "selected_rows": len(selected),
         "medium_priority_rows": len(medium),
         "missing": missing,
-        "output_dir": str(OUT),
+        "output_dir": str(out_dir),
     }
-    (OUT / "stage1_followup_annotation_pack_decision.json").write_text(
+    (out_dir / "stage1_followup_annotation_pack_decision.json").write_text(
         json.dumps(decision, indent=2, ensure_ascii=False), encoding="utf-8"
     )
     print(json.dumps(decision, indent=2, ensure_ascii=False))
