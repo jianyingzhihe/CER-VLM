@@ -1,6 +1,6 @@
 # Paper2 Current Status
 
-Updated: 2026-06-03 12:31 CST
+Updated: 2026-06-03 15:05 CST
 
 ## Stage1 Behavior Viability
 
@@ -104,6 +104,7 @@ Qwen PLT mechanism used `paper2_mechanism_rank50_v1`: 3 samples, layers 13/15/17
 | model | lens | label | rows | samples | key result |
 |---|---|---|---:|---:|---|
 | Gemma | hidden restore | multi-evidence supported | 16 | 1 | target effect mean `2.898`, positive frac `0.750` |
+| Gemma | compact PLT/source-route | multi-evidence supported | 4 | 1 | mixed; no union-specific route weakening in the single supported case |
 | Qwen | hidden restore | multi-evidence supported | 144 | 3 | target effect mean `1.239`, positive frac `0.910` |
 | Qwen | PLT candidate discovery | multi-evidence supported | 72 | 3 | all 3 cases produced Paper2-specific PLT candidates |
 | Qwen | PLT feature zeroing/restore | multi-evidence supported | 36 | 3 | real source effect mean `0.019`, real-minus-shuffled `0.026` |
@@ -111,7 +112,28 @@ Qwen PLT mechanism used `paper2_mechanism_rank50_v1`: 3 samples, layers 13/15/17
 
 Interpretation: Qwen now has a filtered Paper2 mechanism bridge under both hidden and PLT lenses. The PLT signal is small in absolute magnitude but present across all three supported cases after removing the smoke cap. This fits the broader Qwen story: hidden-level evidence flow is clearer; individual/local PLT feature signals exist; grouped PLT route effects remain weak/mixed.
 
-For Gemma, the current Paper2 evidence is still sample-limited: the one supported case has a positive hidden bridge, but Gemma PLT/source-route should be treated as pending case-level follow-up rather than inferred from hidden alone.
+For Gemma, the current Paper2 evidence is still sample-limited: the one supported case has a positive hidden bridge, and we now also ran a compact PLT/source-route case probe with `max_feature_nodes=8`. That probe did not confirm a union-specific compositional route: `mask_B` weakly reduced traced path mass (`-0.036` condition-minus-clean), `random_union_size` was also slightly negative (`-0.011`), while `mask_A` and `mask_A_union_B` increased traced path mass (`+0.032` and `+0.065`). This should be written as a case-level mixed diagnostic, not as a Gemma model-level negative claim.
+
+This updates the symmetry of the mechanism table: Qwen has hidden plus local PLT-feature evidence on three supported cases; Gemma has hidden plus a compact PLT/source-route probe on its one supported case, but the PLT/source-route probe is not a clean positive. The practical implication is that Paper2 currently remains Qwen-led for the compositional mechanism story, while Gemma mainly contributes evidence that the behavior/hidden bridge exists but requires more A/B-supported annotations before a route-level compositional claim is safe.
+
+## Stage1 Follow-up Annotation Pack
+
+We generated a high-priority follow-up annotation pack at `annotation/stage1_followup_ab_evidence_pack_v2`.
+
+| priority | rows | contents |
+|---|---:|---|
+| high | 3 | images, blank CSV, HTML quick annotation page, and empty `region_A/region_B/region_A_union_B` mask folders |
+| medium | 13 | candidate CSV only; not packed into the default UI |
+
+High-priority rows:
+
+| model | sample | answer |
+|---|---|---|
+| Gemma | `okvqa_val_2847255` | china |
+| Gemma | `okvqa_val_01162` | tony hawk |
+| Qwen | `okvqa_val_03127` | pelican |
+
+These are the next highest-value annotation targets because they already show clean-answer behavior and strong wrong-image sensitivity, but they lack A/B evidence masks for Stage1 composition filtering.
 
 ## Engineering Notes
 
@@ -138,3 +160,8 @@ For Gemma, the current Paper2 evidence is still sample-limited: the one supporte
 - `stage3_mechanism/paper2_stage3_mechanism_summary_paper2_mechanism_rank50_v1.csv`
 - `stage3_mechanism/paper2_stage3_mechanism_paper2_mechanism_rank50_v1_decision.json`
 - `stage3_mechanism/003_paper2_stage3_mechanism_viability_paper2_mechanism_rank50_v1.md`
+- `stage3_mechanism/paper2_stage3_gemma_source_route_full_paper2_mechanism_rank50_v1_summary.csv`
+- `stage3_mechanism/paper2_stage3_gemma_source_route_full_paper2_mechanism_rank50_v1_decision.json`
+- `stage3_mechanism/004_paper2_stage3_gemma_source_route_paper2_mechanism_rank50_v1.md`
+- `annotation/stage1_followup_ab_evidence_pack_v2/stage1_followup_annotation_blank.csv`
+- `annotation/stage1_followup_ab_evidence_pack_v2/stage1_followup_annotation_ui.html`

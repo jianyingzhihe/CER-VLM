@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-06-03 15:05:14",
+  "status": "gemma_case_route_mixed_or_not_union_specific",
+  "mode": "full",
+  "tag": "paper2_mechanism_rank50_v1",
+  "rows": 4,
+  "union_weakening": -0.06532037430806473,
+  "max_single_weakening": 0.03596443067135141,
+  "random_union_weakening": 0.011137112025504353,
+  "interpretation": "Single Gemma Paper2 case diagnostic; do not treat as model-level claim."
+}

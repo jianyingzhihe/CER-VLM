@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "stem": "paper2_stage3_gemma_source_route_smoke_paper2_mechanism_rank50_v1_random_union_size",
+  "sample_compare_rows": 1,
+  "intervention_rows": 1
+}
