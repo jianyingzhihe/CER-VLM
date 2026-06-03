@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -27,6 +28,11 @@ def _read_json(path: Path) -> dict[str, Any]:
 
 def _norm_label(label: str) -> str:
     key = label.strip().lower().replace("-", "_").replace(" ", "_")
+    compact = key.replace("_", "")
+    if compact in {"regiona", "answera", "evidencea"}:
+        return "region_A"
+    if re.fullmatch(r"(region|answer|evidence)[b-z]", compact):
+        return "region_B"
     return ALIASES.get(key, label.strip())
 
 
