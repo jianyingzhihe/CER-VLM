@@ -80,9 +80,9 @@ def _page(rows: list[dict[str, Any]]) -> str:
   <p><b>Type:</b> {html.escape(row['sample_type'])}</p>
   <p class="todo">Draw and save masks under <code>{mask_dir}</code>:</p>
   <ul>
-    <li><code>region_A.png</code>: first necessary evidence region</li>
-    <li><code>region_B.png</code>: second necessary evidence region</li>
-    <li><code>region_A_union_B.png</code>: union of A and B</li>
+    <li><code>region_A.png</code>: one answer-supporting evidence source</li>
+    <li><code>region_B.png</code>: a second distinct answer-supporting evidence source</li>
+    <li><code>region_A_union_B.png</code>: union of A and B; only this combined mask should ideally break the answer</li>
   </ul>
 </section>"""
         )
@@ -101,11 +101,52 @@ def _page(rows: list[dict[str, Any]]) -> str:
 </head>
 <body>
   <h1>Paper2 Stage1 Follow-up Annotation Pack v2</h1>
-  <p>Goal: add A/B evidence masks for high-priority behavior-strong cases that currently lack Stage1 A/B masks.</p>
+  <p>Goal: add A/B evidence masks where masking A alone or B alone should still leave enough evidence, but masking A and B together should remove the answer evidence.</p>
   {''.join(cards)}
 </body>
 </html>
 """
+
+
+def _question_guide(rows: list[dict[str, Any]]) -> str:
+    lines = [
+        "# Paper2 Follow-up A/B Evidence Annotation Guide",
+        "",
+        "Use LabelMe labels `region_A` and `region_B`.",
+        "",
+        "A/B definition for Paper2:",
+        "",
+        "- `region_A` and `region_B` are two distinct answer-supporting evidence sources.",
+        "- If only `region_A` is masked, the model/human should still be able to infer the answer from `region_B`.",
+        "- If only `region_B` is masked, the model/human should still be able to infer the answer from `region_A`.",
+        "- Only `region_A_union_B` should ideally remove enough evidence that the answer can no longer be inferred.",
+        "",
+        "`region_A_union_B.png` is generated automatically by `export_labelme_masks.ps1`.",
+        "",
+    ]
+    for idx, row in enumerate(rows, start=1):
+        lines.extend(
+            [
+                f"## {idx}. {row['sample_id']} / {row['model_family']}",
+                "",
+                f"![image]({Path(row['image_path']).as_posix()})",
+                "",
+                f"- **Question:** {row['question_text']}",
+                f"- **Answer:** `{row['answer_text']}`",
+                f"- **Type:** `{row['sample_type']}`",
+                f"- **Clean exact answer:** `{row['clean_exact_answer']}`",
+                f"- **Suggested mask dir:** `{row['mask_dir']}`",
+                "",
+                "**Annotation reminder:**",
+                "",
+                "- `region_A`: one answer-supporting evidence source.",
+                "- `region_B`: a second distinct answer-supporting evidence source.",
+                "- Avoid choosing A/B as two pieces that are each individually necessary; the intended test is that single masking preserves the answer, union masking breaks it.",
+                "- If there is truly only one answer-supporting region, draw it as `region_A` and leave a note later as `one_region_only` rather than inventing `region_B`.",
+                "",
+            ]
+        )
+    return "\n".join(lines)
 
 
 def _write_labelme_helpers(out_dir: Path) -> None:
@@ -160,8 +201,16 @@ def _write_labelme_helpers(out_dir: Path) -> None:
                 "",
                 "Use exactly two labels:",
                 "",
-                "- `region_A`: first necessary evidence region.",
-                "- `region_B`: second necessary evidence region.",
+                "- `region_A`: one answer-supporting evidence source.",
+                "- `region_B`: a second distinct answer-supporting evidence source.",
+                "",
+                "A/B definition:",
+                "",
+                "- Masking only A should still leave enough evidence through B.",
+                "- Masking only B should still leave enough evidence through A.",
+                "- Masking A and B together should ideally remove the answer evidence.",
+                "",
+                "If the image truly has only one answer-supporting region, draw it as `region_A` and mark the case later as `one_region_only`; do not invent a fake `region_B`.",
                 "",
                 "The exporter also accepts old aliases:",
                 "",
@@ -248,6 +297,7 @@ def main() -> int:
     _write_csv(out_dir / "stage1_followup_annotation_blank.csv", out_rows, fields)
     _write_csv(out_dir / "stage1_followup_medium_priority_candidates.csv", medium, list(medium[0].keys()) if medium else [])
     (out_dir / "stage1_followup_annotation_ui.html").write_text(_page(out_rows), encoding="utf-8")
+    (out_dir / "QUESTION_ANSWER_LABELME_GUIDE.md").write_text(_question_guide(out_rows), encoding="utf-8")
     _write_labelme_helpers(out_dir)
     decision = {
         "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
