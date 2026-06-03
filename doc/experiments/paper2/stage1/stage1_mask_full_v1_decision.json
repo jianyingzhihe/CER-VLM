@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-06-03 11:53:35",
+  "status": "needs_annotation_revision",
+  "mode": "full",
+  "tag": "mask_full_v1",
+  "raw_rows": 240,
+  "evaluated_model_sample_pairs": 30,
+  "supported_sample_count": 4,
+  "supported_sample_types": [
+    "comparison_reasoning",
+    "relation_reasoning",
+    "text_object_binding"
+  ],
+  "label_counts": {
+    "one_region_dominated": 16,
+    "mixed_or_unclear": 4,
+    "shortcut_prior_suspected": 5,
+    "blocked": 1,
+    "multi_evidence_supported": 4
+  },
+  "outputs": {
+    "composition_effect_by_sample": "E:\\Bridging\\paper2_compositional_evidence_routing\\doc\\experiments\\stage1\\results\\composition_effect_by_sample.csv",
+    "composition_effect_by_type": "E:\\Bridging\\paper2_compositional_evidence_routing\\doc\\experiments\\stage1\\results\\composition_effect_by_type.csv",
+    "model_comparison_summary": "E:\\Bridging\\paper2_compositional_evidence_routing\\doc\\experiments\\stage1\\results\\model_comparison_summary.csv",
+    "blocked_or_shortcut_samples": "E:\\Bridging\\paper2_compositional_evidence_routing\\doc\\experiments\\stage1\\results\\blocked_or_shortcut_samples.csv"
+  }
+}

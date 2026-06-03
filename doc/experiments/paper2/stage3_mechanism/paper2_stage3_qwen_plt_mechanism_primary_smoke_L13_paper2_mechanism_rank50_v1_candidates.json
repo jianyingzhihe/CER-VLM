@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-06-03 12:15:45",
+  "script": "run_stage4_qwen_evidence_first_feature_discovery.py",
+  "args": {
+    "model_name": "/root/autodl-tmp/tca-reasoning/data/hf_cache/hub/models--Qwen--Qwen2.5-VL-7B-Instruct/snapshots/cc594898137f460bfe9f0759e9844b3ce807cfb5",
+    "transcoder_ref": "KokosDev/qwen2p5vl-7b-plt",
+    "prompt_runs": "/root/autodl-tmp/tca-reasoning/paper2_stage3_qwen_plt_mechanism/paperpack72_primary_prompt_runs.csv",
+    "image_root": "/root/autodl-tmp/tca-reasoning/paper2_stage3_qwen_plt_mechanism/assets_paper2_mechanism_rank50_v1/images",
+    "mask_root": "/root/autodl-tmp/tca-reasoning/paper2_stage3_qwen_plt_mechanism/assets_paper2_mechanism_rank50_v1/exported_masks",
+    "out_csv": "/root/autodl-tmp/tca-reasoning/paper2_stage3_qwen_plt_mechanism/paper2_stage3_qwen_plt_mechanism_primary_smoke_L13_paper2_mechanism_rank50_v1_candidates.csv",
+    "summary_json": "/root/autodl-tmp/tca-reasoning/paper2_stage3_qwen_plt_mechanism/paper2_stage3_qwen_plt_mechanism_primary_smoke_L13_paper2_mechanism_rank50_v1_candidates.json",
+    "layer": 13,
+    "answer_prefix": "The answer is ",
+    "real_conditions": "answer_mask,union_mask",
+    "control_conditions": "shifted_mask,shuffled_mask",
+    "position_group": "visual_answer",
+    "candidate_pool_size": 8192,
+    "top_per_prompt_run": 8,
+    "main_per_prompt_run": 4,
+    "position_chunk_size": 64,
+    "max_prompt_runs": 0,
+    "max_clean_rank": 50,
+    "min_clean_activation": 0.0,
+    "min_specificity": 0.0,
+    "min_target_contribution": 0.0,
+    "min_correct_minus_wrong_contribution": 0.0,
+    "wrong_contribution_ratio": 1.0,
+    "min_gpu_free_gb": 12.0
+  },
+  "env_presence": {
+    "HF_HOME": true,
+    "HUGGINGFACE_HUB_CACHE": true,
+    "HF_ENDPOINT": true,
+    "HF_TOKEN": true,
+    "HUGGINGFACE_HUB_TOKEN": true,
+    "http_proxy": true,
+    "https_proxy": true,
+    "HTTP_PROXY": false,
+    "HTTPS_PROXY": false
+  },
+  "gpu_before": {
+    "available": true,
+    "device_count": 1,
+    "device_name": "NVIDIA vGPU-48GB",
+    "free_gb": 46.986,
+    "total_gb": 47.371
+  },
+  "skipped": [],
+  "transcoder": {
+    "type": "TranscoderSet",
+    "config_model_kind": "transcoder_set"
+  },
+  "finished_at": "2026-06-03 12:16:13",
+  "status": "ok",
+  "candidate_rows": 24,
+  "main_rows": 12,
+  "prompt_runs_with_candidates": 3,
+  "rejection_counts": {},
+  "gpu_after": {
+    "available": true,
+    "device_count": 1,
+    "device_name": "NVIDIA vGPU-48GB",
+    "free_gb": 31.269,
+    "total_gb": 47.371
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-06-03 00:02:50",
+  "script": "run_paper2_stage1_behavior_screen.py",
+  "args": {
+    "model_family": "gemma",
+    "model_name": "/root/autodl-tmp/tca-reasoning/data/hf_cache/hub/models--google--gemma-3-4b-it/snapshots/093f9f388b31de276ce2de164bdc2081324b9767",
+    "manifest": "/root/autodl-tmp/tca-reasoning/paper2_stage1_composition/stage1_composition_screen_viability_v1_manifest.csv",
+    "image_root": "/root/autodl-tmp/tca-reasoning/paper2_stage1_composition/assets/images",
+    "mask_root": "/root/autodl-tmp/tca-reasoning/paper2_stage1_composition/assets/exported_masks",
+    "conditions": "clean,wrong_image",
+    "max_rows": 0,
+    "max_new_tokens": 4,
+    "answer_prefix": "The answer is ",
+    "out_csv": "/root/autodl-tmp/tca-reasoning/paper2_stage1_composition/stage1_composition_screen_viability_v1_gemma.csv",
+    "out_json": "/root/autodl-tmp/tca-reasoning/paper2_stage1_composition/stage1_composition_screen_viability_v1_gemma.json"
+  },
+  "row_count": 40,
+  "conditions": [
+    "clean",
+    "wrong_image"
+  ],
+  "status": "completed",
+  "output_rows": 80,
+  "ok_rows": 80,
+  "blocked_rows": 0,
+  "completed_at": "2026-06-03 00:03:55"
+}

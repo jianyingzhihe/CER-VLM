@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-06-03 12:31:14",
+  "tag": "paper2_mechanism_rank50_v1",
+  "mode": "full",
+  "status": "paper2_stage3_mechanism_full_ready",
+  "total_rows": 628,
+  "summary_rows": 7,
+  "qwen_plt_rows": 324,
+  "gemma_supported_hidden_rows": 16,
+  "outputs": {
+    "rows": "E:\\Bridging\\doc\\experiments\\paper2\\stage3_mechanism\\paper2_stage3_mechanism_rows_paper2_mechanism_rank50_v1.csv",
+    "summary": "E:\\Bridging\\doc\\experiments\\paper2\\stage3_mechanism\\paper2_stage3_mechanism_summary_paper2_mechanism_rank50_v1.csv",
+    "decision": "E:\\Bridging\\doc\\experiments\\paper2\\stage3_mechanism\\paper2_stage3_mechanism_paper2_mechanism_rank50_v1_decision.json"
+  }
+}

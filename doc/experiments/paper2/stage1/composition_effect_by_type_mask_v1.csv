@@ -1,0 +1,7 @@
+model_family,sample_type,n,composition_effect_margin_mean,composition_effect_rank_mean,multi_evidence_supported_count,blocked_count
+gemma,relation_reasoning,3,-4.791666666666667,-15674.333333333334,0,0
+gemma,text_object_binding,1,3.375,2437.0,1,0
+gemma,comparison_reasoning,1,-4.0,-286.0,0,0
+qwen,relation_reasoning,3,0.6458333333333334,61.333333333333336,2,0
+qwen,text_object_binding,1,-0.375,17.0,0,0
+qwen,comparison_reasoning,1,2.0625,41.0,1,0

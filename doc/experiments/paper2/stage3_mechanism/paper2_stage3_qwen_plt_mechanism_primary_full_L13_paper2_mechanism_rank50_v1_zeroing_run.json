@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-06-03 12:23:41",
+  "model_name": "/root/autodl-tmp/tca-reasoning/data/hf_cache/hub/models--Qwen--Qwen2.5-VL-7B-Instruct/snapshots/cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "transcoder_ref": "KokosDev/qwen2p5vl-7b-plt",
+  "candidate_manifest": "/root/autodl-tmp/tca-reasoning/paper2_stage3_qwen_plt_mechanism/paper2_stage3_qwen_plt_mechanism_primary_full_L13_paper2_mechanism_rank50_v1_candidates.csv",
+  "selection": "main",
+  "layer": 13,
+  "requested_candidates": 12,
+  "env_presence": {
+    "HF_HOME": true,
+    "HUGGINGFACE_HUB_CACHE": true,
+    "HF_ENDPOINT": true,
+    "HF_TOKEN": true,
+    "HUGGINGFACE_HUB_TOKEN": true,
+    "http_proxy": true,
+    "https_proxy": true,
+    "HTTP_PROXY": false,
+    "HTTPS_PROXY": false
+  },
+  "gpu_before": {
+    "available": true,
+    "device_count": 1,
+    "device_name": "NVIDIA vGPU-48GB",
+    "free_gb": 46.986,
+    "total_gb": 47.371
+  },
+  "skipped": [],
+  "claim_boundary": "Qwen-native causal cutter validation. Candidates come from Qwen top8 intervention rows; no Gemma nodes or feature maps are used.",
+  "transcoder": {
+    "type": "TranscoderSet",
+    "config_model_kind": "transcoder_set"
+  },
+  "gpu_after": {
+    "available": true,
+    "device_count": 1,
+    "device_name": "NVIDIA vGPU-48GB",
+    "free_gb": 31.416,
+    "total_gb": 47.371
+  },
+  "decision": {
+    "status": "ok",
+    "usable_candidates": 12,
+    "requested_candidates": 12,
+    "raw_rows": 480,
+    "skipped_count": 0
+  }
+}

@@ -1,0 +1,81 @@
+model_family,sample_id,sample_type,question_text,answer_text,clean_predicted_answer,wrong_predicted_answer,clean_target_rank,wrong_target_rank,rank_delta_wrong_minus_clean,clean_target_logit,wrong_target_logit,target_logit_drop_clean_minus_wrong,clean_margin,wrong_margin,margin_drop_clean_minus_wrong,decoded_changed,clean_exact_answer,wrong_exact_answer,format_ok_both,strong_case_score
+gemma,okvqa_val_00310,relation_reasoning,How do we know that this bathroom is probably in a high rise building?,view,the answer,it,86720.0,108934.0,22214.0,-2.09375,-4.4375,2.34375,-44.84375,-48.6875,3.84375,1,0,0,1,1120.04375
+gemma,okvqa_val_00492,local_context_inference,What type of boat is this?,sail,20foot,surfboard,30.0,1823.0,1793.0,19.125,16.125,3.0,-23.875,-41.625,17.75,1,0,0,1,99.65
+gemma,okvqa_val_00497,local_context_inference,Who invented this kind of suit?,surfer,1950,1930,2217.0,87116.0,84899.0,15.75,-1.7890625,17.5390625,-28.75,-51.7890625,23.0390625,1,0,0,1,4269.4890625
+gemma,okvqa_val_00506,local_context_inference,Named after theodore roosevelt?,teddy bear,1901,1901,35.0,33.0,-2.0,25.625,27.25,-1.625,-10.875,-16.5,5.625,0,0,0,1,3.0
+gemma,okvqa_val_00528,comparison_reasoning,The stuffed animal in this picture is named for which president?,teddy roosevelt,100,teddy,3.0,1.0,-2.0,33.25,38.75,-5.5,-1.75,1.5,-3.25,1,0,0,1,7.0
+gemma,okvqa_val_00756,local_context_inference,What war is this airplane associated with?,world war 2,2nd world war,2nd world war,18.0,22.0,4.0,37.0,28.5,8.5,-28.0,-20.25,-7.75,0,0,0,1,11.7
+gemma,okvqa_val_00893,relation_reasoning,How does this train run?,electricity,100,3rd rail,440.0,28682.0,28242.0,22.875,4.125,18.75,-25.625,-42.375,16.75,1,0,0,1,1437.8500000000001
+gemma,okvqa_val_00912,local_context_inference,How do we know there may be a railroad nearby?,sign,the presence,the presence,2725.0,320.0,-2405.0,13.6875,20.625,-6.9375,-39.5625,-27.125,-12.4375,0,0,0,1,3.0
+gemma,okvqa_val_01162,local_context_inference,Who is famous for this?,tony hawk,tony hawk,19th,1.0,3468.0,3467.0,41.75,15.375,26.375,3.5,-32.875,36.375,1,1,0,1,206.72500000000002
+gemma,okvqa_val_01199,relation_reasoning,What is the typical habitat for these animals?,wood,,littoral zones of coastal,25513.0,80532.0,55019.0,4.59375,-2.9375,7.53125,-46.40625,-49.6875,3.28125,1,0,0,0,2762.4812500000003
+gemma,okvqa_val_01236,relation_reasoning,How many stomachs does this animal have?,3,4,0,5.0,7.0,2.0,47.25,24.5,22.75,-16.5,-20.0,3.5,1,0,0,1,29.85
+gemma,okvqa_val_01256,comparison_reasoning,Which fashion conscious sisters are famous for playing this game?,williams,venus and,the answer,1613.0,22777.0,21164.0,13.1875,5.0,8.1875,-27.0625,-49.0,21.9375,1,0,0,1,1073.3875
+gemma,okvqa_val_01672,comparison_reasoning,What is the most common kind of cheese used in this dish?,mozzarella,mozzarella,cheddar,10.0,19.0,9.0,40.5,39.0,1.5,-12.25,-10.5,-1.75,1,1,0,1,8.95
+gemma,okvqa_val_01692,relation_reasoning,What do these animals eat?,leaf,giraffes primarily eat,19th,2059.0,12061.0,10002.0,17.75,8.875,8.875,-37.5,-28.875,-8.625,1,0,0,1,515.975
+gemma,okvqa_val_01804,comparison_reasoning,Which threatened insect is famously the same color as this train?,bee,350,1957,111.0,107.0,-4.0,28.75,28.75,0.0,-14.5,-16.5,2.0,1,0,0,1,7.0
+gemma,okvqa_val_01938,local_context_inference,Name the bike model shown in this picture?,bmw,2013,3aw,80.0,1819.0,1739.0,25.875,17.5,8.375,-42.625,-30.0,-12.625,1,0,0,1,102.325
+gemma,okvqa_val_01960,relation_reasoning,What kind of couch is that?,sofa,19th,the image doesn,15218.0,7322.0,-7896.0,4.09375,10.3125,-6.21875,-36.15625,-28.9375,-7.21875,1,0,0,1,7.0
+gemma,okvqa_val_02108,relation_reasoning,Who invented the transportation device in this picture?,richard trevithick,19th,4legged livestock,8505.0,35405.0,26900.0,13.125,4.40625,8.71875,-30.625,-42.34375,11.71875,1,0,0,1,1360.71875
+gemma,okvqa_val_02359,relation_reasoning,What kind of birds are these?,seagull,1st and,it,57.0,465.0,408.0,27.875,20.25,7.625,-22.625,-19.5,-3.125,1,0,0,1,35.025000000000006
+gemma,okvqa_val_02363,local_context_inference,These animals are closely related to what american animal?,horse,ponies,ursa,8.0,1345.0,1337.0,34.25,18.125,16.125,-5.5,-24.625,19.125,1,0,0,1,89.97500000000001
+gemma,okvqa_val_02785,relation_reasoning,What condition are these athletes trying to prevent with their clothing?,hypothermia,hypothermia,chilling,8.0,104.0,96.0,37.75,26.25,11.5,-3.0,-17.25,14.25,1,1,0,1,23.3
+gemma,okvqa_val_03127,comparison_reasoning,Which animal shown is closely associated with roof nests and holland?,pelican,pelicans,,2.0,208.0,206.0,52.75,28.5,24.25,-1.5,-13.5,12.0,1,0,0,0,38.55
+gemma,okvqa_val_03189,local_context_inference,What is the purpose of the fin on the pink surfboard?,balance,the fin helps,101 to,123926.0,127924.0,3998.0,-3.71875,-5.34375,1.625,-39.21875,-41.34375,2.125,1,0,0,1,208.525
+gemma,okvqa_val_03909,comparison_reasoning,Which type of helmet is used by the sport person shown in this picture?,bat helmet,a baseball helmet,34 helmet,8862.0,68683.0,59821.0,8.8125,-3.296875,12.109375,-40.6875,-54.546875,13.859375,1,0,0,1,3010.159375
+gemma,okvqa_val_03979,text_object_binding,A beverage is represented here what brand is its opposite in the cola wars?,pepsi,7up,7 up,12.0,16.0,4.0,39.0,36.25,2.75,-18.75,-27.25,8.5,1,0,0,1,9.95
+gemma,okvqa_val_04292,relation_reasoning,Are the leaves of the plant that produce this yellow fruit long or short?,long,,,2202.0,446.0,-1756.0,16.75,23.0,-6.25,-33.0,-29.75,-3.25,0,0,0,0,0.0
+gemma,okvqa_val_04586,local_context_inference,What other movie franchises has lego made playsets based on?,star war,19 franchises,2000,98.0,207.0,109.0,29.5,23.25,6.25,-26.5,-37.0,10.5,1,0,0,1,18.7
+gemma,okvqa_val_1171125,comparison_reasoning,Which material is used for making the sofa set shown in this picture?,polyester,wood and,3dprinted,1710.0,884.0,-826.0,17.625,20.25,-2.625,-31.375,-28.5,-2.875,1,0,0,1,7.0
+gemma,okvqa_val_1295955,text_object_binding,Why would this person be holding this sign?,protest,he is,they are,2174.0,11342.0,9168.0,14.0625,8.375,5.6875,-38.1875,-42.125,3.9375,1,0,0,1,471.08750000000003
+gemma,okvqa_val_1686835,comparison_reasoning,Which item shown here is a compound word derived from the name of the human cranium and the telephone?,headphone,bheadphonesb,btelephoneb,10.0,226.0,216.0,39.5,26.625,12.875,-7.5,-22.625,15.125,1,0,0,1,30.675
+gemma,okvqa_val_1860605,comparison_reasoning,What is the most important tennis tournament played on this surface?,french open,,10pin bowling,208.0,385.0,177.0,24.375,14.625,9.75,-25.375,-26.375,1.0,1,0,0,0,22.6
+gemma,okvqa_val_2366045,text_object_binding,What style of design are the couch and love seat in this room patterned after?,vintage,18th,1950,588.0,97.0,-491.0,19.125,17.375,1.75,-34.125,-29.125,-5.0,1,0,0,1,8.75
+gemma,okvqa_val_2373185,text_object_binding,How many sides do these signs normally have?,8,3,3,8.0,9.0,1.0,33.5,34.5,-1.0,-29.25,-26.25,-3.0,0,0,0,1,3.05
+gemma,okvqa_val_258605,comparison_reasoning,What is this room mostly used for?,cook,the room,1,571.0,139662.0,139091.0,20.625,-7.96875,28.59375,-26.875,-55.96875,29.09375,1,0,0,1,6990.14375
+gemma,okvqa_val_2683965,text_object_binding,What shape is the sign?,octagon,8sided,,3.0,917.0,914.0,38.25,15.625,22.625,-7.0,-23.875,16.875,1,0,0,0,72.325
+gemma,okvqa_val_2847255,text_object_binding,What country might this be based on the writing on the bus?,china,china,ireland,5.0,91809.0,91804.0,42.25,-3.046875,45.296875,-6.25,-62.796875,56.546875,1,1,0,1,4642.496875
+gemma,okvqa_val_3326275,text_object_binding,What brand is the racket?,wilson,iriac,wilson,27.0,1.0,-26.0,28.625,35.5,-6.875,-9.375,0.5,-9.875,1,0,1,1,7.0
+gemma,okvqa_val_4043385,text_object_binding,What language is written on the signs?,german,irish and english,10,3071.0,1228.0,-1843.0,16.625,12.0625,4.5625,-35.375,-28.1875,-7.1875,1,0,0,1,11.5625
+gemma,okvqa_val_4131725,text_object_binding,What does the white sign with the arrow mean?,no left turn,90degree,do,504.0,126165.0,125661.0,17.875,-6.09375,23.96875,-28.875,-48.59375,19.71875,1,0,0,1,6314.01875
+gemma,okvqa_val_4999035,text_object_binding,What are the designs in the grass likely made out of?,flower,different types of,3dimensional wooden,348.0,20523.0,20175.0,25.25,4.90625,20.34375,-20.5,-47.09375,26.59375,1,0,0,1,1036.09375
+qwen,okvqa_val_00310,relation_reasoning,How do we know that this bathroom is probably in a high rise building?,view,the large window and,0,18.0,2322.0,2304.0,12.75,5.125,7.625,-4.875,-12.875,8.0,1,0,0,1,129.825
+qwen,okvqa_val_00492,local_context_inference,What type of boat is this?,sail,sailboat,0,1.0,52.0,51.0,15.8125,10.125,5.6875,0.875,-9.75,10.625,1,0,0,1,15.2375
+qwen,okvqa_val_00497,local_context_inference,Who invented this kind of suit?,surfer,neil patrick,1903,8652.0,10240.0,1588.0,1.9296875,1.7578125,0.171875,-9.3828125,-12.0546875,2.671875,1,0,0,1,86.571875
+qwen,okvqa_val_00506,local_context_inference,Named after theodore roosevelt?,teddy bear,ursus,26th president,2.0,7.0,5.0,17.5,13.375,4.125,-1.125,-2.4375,1.3125,1,0,0,1,11.375
+qwen,okvqa_val_00528,comparison_reasoning,The stuffed animal in this picture is named for which president?,teddy roosevelt,teddy roosevelt,0,1.0,6.0,5.0,18.375,13.9375,4.4375,0.125,-3.0625,3.1875,1,1,0,1,11.6875
+qwen,okvqa_val_00756,local_context_inference,What war is this airplane associated with?,world war 2,2nd,0,3.0,26.0,23.0,22.875,14.1875,8.6875,-3.25,-8.8125,5.5625,1,0,0,1,16.8375
+qwen,okvqa_val_00893,relation_reasoning,How does this train run?,electricity,7212,4 legs,5.0,3081.0,3076.0,15.375,2.765625,12.609375,-1.0,-13.984375,12.984375,1,0,0,1,173.409375
+qwen,okvqa_val_00912,local_context_inference,How do we know there may be a railroad nearby?,sign,there is an,there may be a,72.0,187.0,115.0,10.375,8.3125,2.0625,-8.375,-8.4375,0.0625,1,0,0,1,14.8125
+qwen,okvqa_val_01162,local_context_inference,Who is famous for this?,tony hawk,2018,1920,1.0,2395.0,2394.0,9.8125,2.03125,7.78125,0.0,-10.71875,10.71875,1,0,0,1,134.48125
+qwen,okvqa_val_01199,relation_reasoning,What is the typical habitat for these animals?,wood,forests and coastal areas,coastal areas,15.0,890.0,875.0,11.375,6.75,4.625,-5.625,-12.5,6.875,1,0,0,1,55.375
+qwen,okvqa_val_01236,relation_reasoning,How many stomachs does this animal have?,3,4,0,4.0,6.0,2.0,24.625,24.375,0.25,-5.75,-5.875,0.125,1,0,0,1,7.35
+qwen,okvqa_val_01256,comparison_reasoning,Which fashion conscious sisters are famous for playing this game?,williams,williams,7,1.0,448.0,447.0,15.5,4.5625,10.9375,2.0625,-8.0625,10.125,1,1,0,1,40.2875
+qwen,okvqa_val_01672,comparison_reasoning,What is the most common kind of cheese used in this dish?,mozzarella,mozzarella,350,1.0,10.0,9.0,17.25,14.125,3.125,4.125,-2.375,6.5,1,1,0,1,10.575
+qwen,okvqa_val_01692,relation_reasoning,What do these animals eat?,leaf,leaves,0,3.0,4003.0,4000.0,12.25,4.5625,7.6875,-6.75,-12.8125,6.0625,1,0,0,1,214.6875
+qwen,okvqa_val_01804,comparison_reasoning,Which threatened insect is famously the same color as this train?,bee,ladybug,17,13.0,10.0,-3.0,10.0625,10.5625,-0.5,-3.1875,-2.8125,-0.375,1,0,0,1,7.0
+qwen,okvqa_val_01938,local_context_inference,Name the bike model shown in this picture?,bmw,bmw,0,6.0,140.0,134.0,13.875,7.59375,6.28125,-6.5,-10.40625,3.90625,1,1,0,1,19.98125
+qwen,okvqa_val_01960,relation_reasoning,What kind of couch is that?,sofa,19th century,0,31.0,44.0,13.0,11.1875,10.375,0.8125,-4.8125,-10.625,5.8125,1,0,0,1,8.4625
+qwen,okvqa_val_02108,relation_reasoning,Who invented the transportation device in this picture?,richard trevithick,george stephenson,1804,9.0,66.0,57.0,8.1875,7.71875,0.46875,-3.25,-3.78125,0.53125,1,0,0,1,10.31875
+qwen,okvqa_val_02359,relation_reasoning,What kind of birds are these?,seagull,seagulls,0,1.0,61.0,60.0,18.75,10.3125,8.4375,3.375,-8.6875,12.0625,1,0,0,1,18.4375
+qwen,okvqa_val_02363,local_context_inference,These animals are closely related to what american animal?,horse,horse,seal,1.0,96.0,95.0,16.125,8.9375,7.1875,2.3125,-6.8125,9.125,1,1,0,1,18.9375
+qwen,okvqa_val_02785,relation_reasoning,What condition are these athletes trying to prevent with their clothing?,hypothermia,hypothermia,0,1.0,13.0,12.0,19.625,11.3125,8.3125,3.6875,-2.125,5.8125,1,1,0,1,15.9125
+qwen,okvqa_val_03127,comparison_reasoning,Which animal shown is closely associated with roof nests and holland?,pelican,pelican,0,1.0,1442.0,1441.0,15.1875,3.84375,11.34375,1.1875,-9.15625,10.34375,1,1,0,1,90.39375
+qwen,okvqa_val_03189,local_context_inference,What is the purpose of the fin on the pink surfboard?,balance,to provide stability and,0,9.0,486.0,477.0,17.5,5.5625,11.9375,-3.75,-10.8125,7.0625,1,0,0,1,42.7875
+qwen,okvqa_val_03909,comparison_reasoning,Which type of helmet is used by the sport person shown in this picture?,bat helmet,26,0,19.0,863.0,844.0,9.8125,7.5,2.3125,-5.375,-13.125,7.75,1,0,0,1,51.5125
+qwen,okvqa_val_03979,text_object_binding,A beverage is represented here what brand is its opposite in the cola wars?,pepsi,7,7,2.0,9.0,7.0,14.4375,13.5,0.9375,-6.5625,-7.5,0.9375,0,0,0,1,4.2875
+qwen,okvqa_val_04292,relation_reasoning,Are the leaves of the plant that produce this yellow fruit long or short?,long,short,short,2.0,3.0,1.0,21.5,17.125,4.375,-2.125,-3.5,1.375,0,0,0,1,7.425
+qwen,okvqa_val_04586,local_context_inference,What other movie franchises has lego made playsets based on?,star war,indiana jones,10,4.0,2.0,-2.0,15.1875,16.25,-1.0625,-3.9375,-0.25,-3.6875,1,0,0,1,7.0
+qwen,okvqa_val_1171125,comparison_reasoning,Which material is used for making the sofa set shown in this picture?,polyester,leather,leather,72.0,71.0,-1.0,8.5,10.75,-2.25,-8.125,-6.625,-1.5,0,0,0,1,3.0
+qwen,okvqa_val_1295955,text_object_binding,Why would this person be holding this sign?,protest,to protest the quality,0,11.0,20510.0,20499.0,11.25,3.453125,7.796875,-3.5625,-15.171875,11.609375,1,0,0,1,1039.746875
+qwen,okvqa_val_1686835,comparison_reasoning,Which item shown here is a compound word derived from the name of the human cranium and the telephone?,headphone,telephone,911,23.0,168.0,145.0,9.375,6.3125,3.0625,-4.875,-6.3125,1.4375,1,0,0,1,17.3125
+qwen,okvqa_val_1860605,comparison_reasoning,What is the most important tennis tournament played on this surface?,french open,french open,wimbledon,1.0,8.0,7.0,17.625,13.75,3.875,0.5,-3.625,4.125,1,1,0,1,11.225
+qwen,okvqa_val_2366045,text_object_binding,What style of design are the couch and love seat in this room patterned after?,vintage,1920,1970,13.0,27.0,14.0,15.0,13.0,2.0,-7.375,-5.875,-1.5,1,0,0,1,9.7
+qwen,okvqa_val_2373185,text_object_binding,How many sides do these signs normally have?,8,8,3,1.0,7.0,6.0,29.0,24.5,4.5,5.5,-5.125,10.625,1,1,0,1,11.8
+qwen,okvqa_val_258605,comparison_reasoning,What is this room mostly used for?,cook,cooking,traffic,5.0,4346.0,4341.0,14.625,3.375,11.25,-4.25,-12.5625,8.3125,1,0,0,1,235.3
+qwen,okvqa_val_2683965,text_object_binding,What shape is the sign?,octagon,8sided,oval,2.0,18.0,16.0,23.0,15.3125,7.6875,-2.25,-3.5625,1.3125,1,0,0,1,15.4875
+qwen,okvqa_val_2847255,text_object_binding,What country might this be based on the writing on the bus?,china,china,,1.0,16.0,15.0,18.5,12.125,6.375,1.0,-2.9375,3.9375,1,1,0,0,11.125
+qwen,okvqa_val_3326275,text_object_binding,What brand is the racket?,wilson,wilson,0,1.0,31.0,30.0,16.25,12.8125,3.4375,2.0,-6.8125,8.8125,1,1,0,1,11.9375
+qwen,okvqa_val_4043385,text_object_binding,What language is written on the signs?,german,irish,0,58.0,42.0,-16.0,9.25,11.0,-1.75,-8.125,-7.75,-0.375,1,0,0,1,7.0
+qwen,okvqa_val_4131725,text_object_binding,What does the white sign with the arrow mean?,no left turn,no uturn allowed,0,1.0,6.0,5.0,14.3125,12.5625,1.75,0.125,-1.75,1.875,1,0,0,1,9.0
+qwen,okvqa_val_4999035,text_object_binding,What are the designs in the grass likely made out of?,flower,grass,grass,16.0,1388.0,1372.0,10.4375,5.71875,4.71875,-4.0625,-9.09375,5.03125,0,0,0,1,76.31875000000001

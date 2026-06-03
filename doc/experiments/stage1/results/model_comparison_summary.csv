@@ -1,0 +1,3 @@
+model_family,n,supported_count,one_region_dominated_count,redundant_count,shortcut_count,blocked_count,mixed_or_unclear_count
+gemma,15,1,7,0,3,1,3
+qwen,15,3,9,0,2,0,1

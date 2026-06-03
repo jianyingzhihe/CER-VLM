@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-06-03 11:21:49",
+  "tag": "paper2_stage2_hidden_v1",
+  "status": "paper2_stage2_hidden_smoke_ready",
+  "raw_rows": 512,
+  "target_restore_rows": 128,
+  "models": {
+    "gemma": {
+      "target_rows": 32,
+      "samples": [
+        "okvqa_val_00893",
+        "okvqa_val_258605"
+      ],
+      "target_effect_mean": 5.0963287353515625,
+      "target_positive_frac": 0.78125,
+      "target_minus_wrong_mean": 7.2838287353515625,
+      "real_minus_control_mean": -2.052032470703125
+    },
+    "qwen": {
+      "target_rows": 96,
+      "samples": [
+        "okvqa_val_00893",
+        "okvqa_val_258605"
+      ],
+      "target_effect_mean": 1.0904947916666667,
+      "target_positive_frac": 0.75,
+      "target_minus_wrong_mean": -1.5618489583333333,
+      "real_minus_control_mean": 0.85546875
+    }
+  }
+}

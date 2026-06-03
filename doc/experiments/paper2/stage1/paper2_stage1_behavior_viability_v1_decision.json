@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-06-03 11:08:41",
+  "tag": "viability_v1",
+  "status": "paper2_stage1_behavior_viability_ready",
+  "models": {
+    "gemma": {
+      "raw_rows": 80,
+      "paired_samples": 40,
+      "strong_cases": 8,
+      "rank_worsened_frac": 0.75,
+      "logit_drop_mean": 9.0775390625,
+      "margin_drop_mean": 7.6775390625,
+      "decoded_changed_frac": 0.875,
+      "clean_exact_answer_frac": 0.1,
+      "wrong_exact_answer_frac": 0.025
+    },
+    "qwen": {
+      "raw_rows": 80,
+      "paired_samples": 40,
+      "strong_cases": 8,
+      "rank_worsened_frac": 0.9,
+      "logit_drop_mean": 4.827734375,
+      "margin_drop_mean": 4.979296875,
+      "decoded_changed_frac": 0.9,
+      "clean_exact_answer_frac": 0.275,
+      "wrong_exact_answer_frac": 0.0
+    }
+  }
+}

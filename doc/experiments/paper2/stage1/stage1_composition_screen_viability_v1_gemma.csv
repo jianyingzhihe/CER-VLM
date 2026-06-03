@@ -1,0 +1,104 @@
+model_family,sample_id,sample_type,condition,status,blocked_reason,question_text,answer_text,image_filename,target_token_id,target_token,target_logit,target_prob,target_rank,wrong_token_id,wrong_token,wrong_logit,wrong_rank,target_minus_wrong_margin,generated_text,predicted_answer,format_ok,empty_answer
+gemma,okvqa_val_02108,relation_reasoning,clean,ok,,Who invented the transportation device in this picture?,richard trevithick,COCO_val2014_000000160394.jpg,11181, Richard,13.125,3.3977598431220515e-14,8505,236770,1,43.75,1,-30.625,19th-,19th,1,0
+gemma,okvqa_val_02108,relation_reasoning,wrong_image,ok,,Who invented the transportation device in this picture?,richard trevithick,COCO_val2014_000000160394.jpg,11181, Richard,4.40625,3.712738657886206e-19,35405,236812,4,46.75,1,-42.34375,4-legged livestock,4legged livestock,1,0
+gemma,okvqa_val_01236,relation_reasoning,clean,ok,,How many stomachs does this animal have?,3,COCO_val2014_000000573455.jpg,236800,3,47.25,6.825598575233016e-08,5,236812,4,63.75,1,-16.5,4.,4,1,0
+gemma,okvqa_val_01236,relation_reasoning,wrong_image,ok,,How many stomachs does this animal have?,3,COCO_val2014_000000573455.jpg,236800,3,24.5,2.061149695364861e-09,7,236771,0,44.5,1,-20.0,0.,0,1,0
+gemma,okvqa_val_04292,relation_reasoning,clean,ok,,Are the leaves of the plant that produce this yellow fruit long or short?,long,COCO_val2014_000000152360.jpg,12059,Long,16.75,3.9829145129309084e-15,2202,108,"
+
+",49.75,1,-33.0,The answer is,,0,1
+gemma,okvqa_val_04292,relation_reasoning,wrong_image,ok,,Are the leaves of the plant that produce this yellow fruit long or short?,long,COCO_val2014_000000152360.jpg,12059,Long,23.0,1.1563512192051817e-13,446,108,"
+
+",52.75,1,-29.75,The answer is,,0,1
+gemma,okvqa_val_01199,relation_reasoning,clean,ok,,What is the typical habitat for these animals?,wood,COCO_val2014_000000521236.jpg,31317,Wood,4.59375,5.621970191720732e-21,25513,108,"
+
+",51.0,1,-46.40625,The answer is,,0,1
+gemma,okvqa_val_01199,relation_reasoning,wrong_image,ok,,What is the typical habitat for these animals?,wood,COCO_val2014_000000521236.jpg,5168,wood,-2.9375,1.0676391741985791e-22,80532,188517, littoral,46.75,1,-49.6875,littoral zones of coastal,littoral zones of coastal,1,0
+gemma,okvqa_val_02359,relation_reasoning,clean,ok,,What kind of birds are these?,seagull,COCO_val2014_000000507766.jpg,126493,seag,27.875,1.4219446453633822e-10,57,236770,1,50.5,1,-22.625,1st and,1st and,1,0
+gemma,okvqa_val_02359,relation_reasoning,wrong_image,ok,,What kind of birds are these?,seagull,COCO_val2014_000000507766.jpg,95203, seag,20.25,2.3524795444984647e-09,465,432,�,39.75,1,-19.5,It’,it,1,0
+gemma,okvqa_val_02785,relation_reasoning,clean,ok,,What condition are these athletes trying to prevent with their clothing?,hypothermia,COCO_val2014_000000422622.jpg,67901,Hyp,37.75,0.015373092144727707,8,108,"
+
+",40.75,1,-3.0,Hypothermia,hypothermia,1,0
+gemma,okvqa_val_02785,relation_reasoning,wrong_image,ok,,What condition are these athletes trying to prevent with their clothing?,hypothermia,COCO_val2014_000000422622.jpg,43791,hyp,26.25,2.7838913396749376e-08,104,108,"
+
+",43.5,1,-17.25,Chilling.,chilling,1,0
+gemma,okvqa_val_00310,relation_reasoning,clean,ok,,How do we know that this bathroom is probably in a high rise building?,view,COCO_val2014_000000358883.jpg,5841, View,-2.09375,3.293862279754566e-20,86720,432,�,42.75,1,-44.84375,The answer,the answer,1,0
+gemma,okvqa_val_00310,relation_reasoning,wrong_image,ok,,How do we know that this bathroom is probably in a high rise building?,view,COCO_val2014_000000358883.jpg,5841, View,-4.4375,7.133436672827623e-22,108934,432,�,44.25,1,-48.6875,It’,it,1,0
+gemma,okvqa_val_00893,relation_reasoning,clean,ok,,How does this train run?,electricity,COCO_val2014_000000028236.jpg,124076,Electricity,22.875,4.905529107923634e-12,440,236770,1,48.5,1,-25.625,100%,100,1,0
+gemma,okvqa_val_00893,relation_reasoning,wrong_image,ok,,How does this train run?,electricity,COCO_val2014_000000028236.jpg,124076,Electricity,4.125,3.236179227479093e-19,28682,236800,3,46.5,1,-42.375,3rd rail.,3rd rail,1,0
+gemma,okvqa_val_01692,relation_reasoning,clean,ok,,What do these animals eat?,leaf,COCO_val2014_000000229753.jpg,67461,Leaf,17.75,3.8826362410691623e-17,2059,44531, Gir,55.25,1,-37.5,Giraffes primarily eat,giraffes primarily eat,1,0
+gemma,okvqa_val_01692,relation_reasoning,wrong_image,ok,,What do these animals eat?,leaf,COCO_val2014_000000229753.jpg,67461,Leaf,8.875,1.5169559130969595e-13,12061,236770,1,37.75,1,-28.875,19th-,19th,1,0
+gemma,okvqa_val_01960,relation_reasoning,clean,ok,,What kind of couch is that?,sofa,COCO_val2014_000000546964.jpg,168858, Sofa,4.09375,1.9839612001707109e-16,15218,236770,1,40.25,1,-36.15625,19th-,19th,1,0
+gemma,okvqa_val_01960,relation_reasoning,wrong_image,ok,,What kind of couch is that?,sofa,COCO_val2014_000000546964.jpg,168858, Sofa,10.3125,1.2765973716501178e-13,7322,108,"
+
+",39.25,1,-28.9375,The image doesn,the image doesn,1,0
+gemma,okvqa_val_03127,comparison_reasoning,clean,ok,,Which animal shown is closely associated with roof nests and holland?,pelican,COCO_val2014_000000223554.jpg,226233, Pelican,52.75,0.18231144547462463,2,209428, Pelicans,54.25,1,-1.5,Pelicans.,pelicans,1,0
+gemma,okvqa_val_03127,comparison_reasoning,wrong_image,ok,,Which animal shown is closely associated with roof nests and holland?,pelican,COCO_val2014_000000223554.jpg,226233, Pelican,28.5,6.954401214898098e-07,208,108,"
+
+",42.0,1,-13.5,The answer is,,0,1
+gemma,okvqa_val_01256,comparison_reasoning,clean,ok,,Which fashion conscious sisters are famous for playing this game?,williams,COCO_val2014_000000562581.jpg,13643, Williams,13.1875,1.1623979773514592e-12,1613,432,�,40.25,1,-27.0625,Venus and,venus and,1,0
+gemma,okvqa_val_01256,comparison_reasoning,wrong_image,ok,,Which fashion conscious sisters are famous for playing this game?,williams,COCO_val2014_000000562581.jpg,13643, Williams,5.0,5.234667911493352e-22,22777,432,�,54.0,1,-49.0,The answer,the answer,1,0
+gemma,okvqa_val_00528,comparison_reasoning,clean,ok,,The stuffed animal in this picture is named for which president?,teddy roosevelt,COCO_val2014_000000081361.jpg,60349, teddy,33.25,0.09356418251991272,3,236770,1,35.0,1,-1.75,100-,100,1,0
+gemma,okvqa_val_00528,comparison_reasoning,wrong_image,ok,,The stuffed animal in this picture is named for which president?,teddy roosevelt,COCO_val2014_000000081361.jpg,60349, teddy,38.75,0.6666542291641235,1,236770,1,37.25,2,1.5,teddy.,teddy,1,0
+gemma,okvqa_val_01672,comparison_reasoning,clean,ok,,What is the most common kind of cheese used in this dish?,mozzarella,COCO_val2014_000000007787.jpg,38987, Moz,40.5,1.9396984498598613e-06,10,108,"
+
+",52.75,1,-12.25,Mozzarella,mozzarella,1,0
+gemma,okvqa_val_01672,comparison_reasoning,wrong_image,ok,,What is the most common kind of cheese used in this dish?,mozzarella,COCO_val2014_000000007787.jpg,38987, Moz,39.0,1.3387613762461115e-05,19,143965, cheddar,49.5,1,-10.5,cheddar.,cheddar,1,0
+gemma,okvqa_val_01804,comparison_reasoning,clean,ok,,Which threatened insect is famously the same color as this train?,bee,COCO_val2014_000000345456.jpg,32737, bee,28.75,2.3130793636028102e-07,111,236800,3,43.25,1,-14.5,350,350,1,0
+gemma,okvqa_val_01804,comparison_reasoning,wrong_image,ok,,Which threatened insect is famously the same color as this train?,bee,COCO_val2014_000000345456.jpg,81468,Bee,28.75,3.2907355063116484e-08,107,236770,1,45.25,1,-16.5,1957,1957,1,0
+gemma,okvqa_val_03909,comparison_reasoning,clean,ok,,Which type of helmet is used by the sport person shown in this picture?,bat helmet,COCO_val2014_000000303024.jpg,15907, Bat,8.8125,1.26056400671944e-18,8862,108,"
+
+",49.5,1,-40.6875,A baseball helmet,a baseball helmet,1,0
+gemma,okvqa_val_03909,comparison_reasoning,wrong_image,ok,,Which type of helmet is used by the sport person shown in this picture?,bat helmet,COCO_val2014_000000303024.jpg,12511,bat,-3.296875,1.9790141696365945e-24,68683,236800,3,51.25,1,-54.546875,3/4 helmet,34 helmet,1,0
+gemma,okvqa_val_1171125,comparison_reasoning,clean,ok,,Which material is used for making the sofa set shown in this picture?,polyester,COCO_val2014_000000117112.jpg,43013, polyester,17.625,1.88067741718409e-14,1710,432,�,49.0,1,-31.375,Wood and,wood and,1,0
+gemma,okvqa_val_1171125,comparison_reasoning,wrong_image,ok,,Which material is used for making the sofa set shown in this picture?,polyester,COCO_val2014_000000117112.jpg,43013, polyester,20.25,3.0561946202933843e-13,884,236800,3,48.75,1,-28.5,3D-printed,3dprinted,1,0
+gemma,okvqa_val_1686835,comparison_reasoning,clean,ok,,Which item shown here is a compound word derived from the name of the human cranium and the telephone?,headphone,COCO_val2014_000000168683.jpg,107727, headphone,39.5,0.00032935751369223,10,200,<b>,47.0,1,-7.5,<b>headphones</b>.,bheadphonesb,1,0
+gemma,okvqa_val_1686835,comparison_reasoning,wrong_image,ok,,Which item shown here is a compound word derived from the name of the human cranium and the telephone?,headphone,COCO_val2014_000000168683.jpg,10901, Head,26.625,1.2738646248955376e-10,226,200,<b>,49.25,1,-22.625,<b>telephone</b>.,btelephoneb,1,0
+gemma,okvqa_val_1860605,comparison_reasoning,clean,ok,,What is the most important tennis tournament played on this surface?,french open,COCO_val2014_000000186060.jpg,42150,French,24.375,4.5466330353405304e-12,208,107,"
+",49.75,1,-25.375,The answer is,,0,1
+gemma,okvqa_val_1860605,comparison_reasoning,wrong_image,ok,,What is the most important tennis tournament played on this surface?,french open,COCO_val2014_000000186060.jpg,42150,French,14.625,3.4974640371332466e-12,385,236770,1,41.0,1,-26.375,10pin bowling,10pin bowling,1,0
+gemma,okvqa_val_258605,comparison_reasoning,clean,ok,,What is this room mostly used for?,cook,COCO_val2014_000000025860.jpg,3944, cook,20.625,1.9711302902403194e-12,571,432,�,47.5,1,-26.875,The room,the room,1,0
+gemma,okvqa_val_258605,comparison_reasoning,wrong_image,ok,,What is this room mostly used for?,cook,COCO_val2014_000000025860.jpg,22959,Cook,-7.96875,3.1286600675185637e-25,139662,236770,1,48.0,1,-55.96875,1. Transportation hub,1,1,0
+gemma,okvqa_val_03979,text_object_binding,clean,ok,,A beverage is represented here what brand is its opposite in the cola wars?,pepsi,COCO_val2014_000000302787.jpg,164569,Pep,39.0,7.174703497980772e-09,12,236832,7,57.75,1,-18.75,7-Up.,7up,1,0
+gemma,okvqa_val_03979,text_object_binding,wrong_image,ok,,A beverage is represented here what brand is its opposite in the cola wars?,pepsi,COCO_val2014_000000302787.jpg,164569,Pep,36.25,1.463778100466162e-12,16,236832,7,63.5,1,-27.25,7 Up.,7 up,1,0
+gemma,okvqa_val_4043385,text_object_binding,clean,ok,,What language is written on the signs?,german,COCO_val2014_000000404338.jpg,51423,German,16.625,3.243241774131229e-16,3071,107,"
+",52.0,1,-35.375,Irish and English,irish and english,1,0
+gemma,okvqa_val_4043385,text_object_binding,wrong_image,ok,,What language is written on the signs?,german,COCO_val2014_000000404338.jpg,51423,German,12.0625,5.731593043060978e-13,1228,236770,1,40.25,1,-28.1875,"10,",10,1,0
+gemma,okvqa_val_4999035,text_object_binding,clean,ok,,What are the designs in the grass likely made out of?,flower,COCO_val2014_000000499903.jpg,9562, flower,25.25,5.232579924907554e-10,348,107,"
+",45.75,1,-20.5,Different types of,different types of,1,0
+gemma,okvqa_val_4999035,text_object_binding,wrong_image,ok,,What are the designs in the grass likely made out of?,flower,COCO_val2014_000000499903.jpg,53162,Flower,4.90625,2.4543298977177542e-21,20523,236800,3,52.0,1,-47.09375,3-dimensional wooden,3dimensional wooden,1,0
+gemma,okvqa_val_2373185,text_object_binding,clean,ok,,How many sides do these signs normally have?,8,COCO_val2014_000000237318.jpg,236828,8,33.5,1.98100785992264e-13,8,236800,3,62.75,1,-29.25,3.,3,1,0
+gemma,okvqa_val_2373185,text_object_binding,wrong_image,ok,,How many sides do these signs normally have?,8,COCO_val2014_000000237318.jpg,236828,8,34.5,3.978960824019273e-12,9,236800,3,60.75,1,-26.25,3.,3,1,0
+gemma,okvqa_val_3326275,text_object_binding,clean,ok,,What brand is the racket?,wilson,COCO_val2014_000000332627.jpg,78541,Wilson,28.625,7.06180144334212e-05,27,243206,Ț,38.0,1,-9.375,Țiriac.,iriac,1,0
+gemma,okvqa_val_3326275,text_object_binding,wrong_image,ok,,What brand is the racket?,wilson,COCO_val2014_000000332627.jpg,78541,Wilson,35.5,0.3416556417942047,1,253298,⁇,35.0,2,0.5,Wilson.,wilson,1,0
+gemma,okvqa_val_4131725,text_object_binding,clean,ok,,What does the white sign with the arrow mean?,no left turn,COCO_val2014_000000413172.jpg,3771,No,17.875,2.7546129439948164e-13,504,236819,9,46.75,1,-28.875,90-degree,90degree,1,0
+gemma,okvqa_val_4131725,text_object_binding,wrong_image,ok,,What does the white sign with the arrow mean?,no left turn,COCO_val2014_000000413172.jpg,3771,No,-6.09375,4.634815554808398e-22,126165,432,�,42.5,1,-48.59375,“Do,do,1,0
+gemma,okvqa_val_1295955,text_object_binding,clean,ok,,Why would this person be holding this sign?,protest,COCO_val2014_000000129595.jpg,41867, Protest,14.0625,2.583950767960088e-17,2174,432,�,52.25,1,-38.1875,He is,he is,1,0
+gemma,okvqa_val_1295955,text_object_binding,wrong_image,ok,,Why would this person be holding this sign?,protest,COCO_val2014_000000129595.jpg,41867, Protest,8.375,2.8679670156314726e-19,11342,432,�,50.5,1,-42.125,They are,they are,1,0
+gemma,okvqa_val_2366045,text_object_binding,clean,ok,,What style of design are the couch and love seat in this room patterned after?,vintage,COCO_val2014_000000236604.jpg,11285, vintage,19.125,1.5021699450334285e-15,588,236770,1,53.25,1,-34.125,18th-,18th,1,0
+gemma,okvqa_val_2366045,text_object_binding,wrong_image,ok,,What style of design are the couch and love seat in this room patterned after?,vintage,COCO_val2014_000000236604.jpg,11285, vintage,17.375,2.2447733775965428e-13,97,236770,1,46.5,1,-29.125,1950,1950,1,0
+gemma,okvqa_val_2683965,text_object_binding,clean,ok,,What shape is the sign?,octagon,COCO_val2014_000000268396.jpg,96060,octagon,38.25,0.0009042777819558978,3,236828,8,45.25,1,-7.0,8-sided.,8sided,1,0
+gemma,okvqa_val_2683965,text_object_binding,wrong_image,ok,,What shape is the sign?,octagon,COCO_val2014_000000268396.jpg,96060,octagon,15.625,4.269587808303221e-11,917,224418, прямоуго,39.5,1,-23.875,прямоугольник.,,0,1
+gemma,okvqa_val_2847255,text_object_binding,clean,ok,,What country might this be based on the writing on the bus?,china,COCO_val2014_000000284725.jpg,31939,China,42.25,0.0017290855757892132,5,432,�,48.5,1,-6.25,China.,china,1,0
+gemma,okvqa_val_2847255,text_object_binding,wrong_image,ok,,What country might this be based on the writing on the bus?,china,COCO_val2014_000000284725.jpg,31939,China,-3.046875,3.9726323074333217e-28,91809,13531, Ireland,59.75,1,-62.796875,Ireland.,ireland,1,0
+gemma,okvqa_val_03189,local_context_inference,clean,ok,,What is the purpose of the fin on the pink surfboard?,balance,COCO_val2014_000000497466.jpg,17873,balance,-3.71875,4.009267501247558e-18,123926,108,"
+
+",35.5,1,-39.21875,The fin helps,the fin helps,1,0
+gemma,okvqa_val_03189,local_context_inference,wrong_image,ok,,What is the purpose of the fin on the pink surfboard?,balance,COCO_val2014_000000497466.jpg,17873,balance,-5.34375,5.531996270153176e-19,127924,236770,1,36.0,1,-41.34375,101 to,101 to,1,0
+gemma,okvqa_val_04586,local_context_inference,clean,ok,,What other movie franchises has lego made playsets based on?,star war,COCO_val2014_000000251752.jpg,9290, Star,29.5,2.460169654799893e-12,98,236770,1,56.0,1,-26.5,"19 franchises,",19 franchises,1,0
+gemma,okvqa_val_04586,local_context_inference,wrong_image,ok,,What other movie franchises has lego made playsets based on?,star war,COCO_val2014_000000251752.jpg,9290, Star,23.25,8.533005278428391e-17,207,236778,2,60.25,1,-37.0,2000,2000,1,0
+gemma,okvqa_val_00506,local_context_inference,clean,ok,,Named after theodore roosevelt?,teddy bear,COCO_val2014_000000116861.jpg,60349, teddy,25.625,6.971168204472633e-06,35,236770,1,36.5,1,-10.875,1901,1901,1,0
+gemma,okvqa_val_00506,local_context_inference,wrong_image,ok,,Named after theodore roosevelt?,teddy bear,COCO_val2014_000000116861.jpg,60349, teddy,27.25,5.46285541247471e-08,33,236770,1,43.75,1,-16.5,1901,1901,1,0
+gemma,okvqa_val_01162,local_context_inference,clean,ok,,Who is famous for this?,tony hawk,COCO_val2014_000000443844.jpg,22801, Tony,41.75,0.9394885897636414,1,38733, Dennis,38.25,2,3.5,Tony Hawk.,tony hawk,1,0
+gemma,okvqa_val_01162,local_context_inference,wrong_image,ok,,Who is famous for this?,tony hawk,COCO_val2014_000000443844.jpg,22801, Tony,15.375,4.912036811235412e-15,3468,236770,1,48.25,1,-32.875,19th-,19th,1,0
+gemma,okvqa_val_02363,local_context_inference,clean,ok,,These animals are closely related to what american animal?,horse,COCO_val2014_000000076866.jpg,46081,horse,34.25,0.0018438620027154684,8,966,pon,39.75,1,-5.5,ponies.,ponies,1,0
+gemma,okvqa_val_02363,local_context_inference,wrong_image,ok,,These animals are closely related to what american animal?,horse,COCO_val2014_000000076866.jpg,46081,horse,18.125,1.9052285790688295e-11,1345,77104,ursa,42.75,1,-24.625,ursa.,ursa,1,0
+gemma,okvqa_val_00492,local_context_inference,clean,ok,,What type of boat is this?,sail,COCO_val2014_000000174679.jpg,67211,Sail,19.125,4.277767029492452e-11,30,236778,2,43.0,1,-23.875,20-foot,20foot,1,0
+gemma,okvqa_val_00492,local_context_inference,wrong_image,ok,,What type of boat is this?,sail,COCO_val2014_000000174679.jpg,54455, Sail,16.125,8.365505526405104e-19,1823,200073, surfboard,57.75,1,-41.625,surfboard.,surfboard,1,0
+gemma,okvqa_val_00497,local_context_inference,clean,ok,,Who invented this kind of suit?,surfer,COCO_val2014_000000296684.jpg,127516, surfer,15.75,3.2318928349511777e-13,2217,236770,1,44.5,1,-28.75,1950,1950,1,0
+gemma,okvqa_val_00497,local_context_inference,wrong_image,ok,,Who invented this kind of suit?,surfer,COCO_val2014_000000296684.jpg,12009,sur,-1.7890625,3.1950990275007833e-23,87116,236770,1,50.0,1,-51.7890625,1930,1930,1,0
+gemma,okvqa_val_00756,local_context_inference,clean,ok,,What war is this airplane associated with?,world war 2,COCO_val2014_000000036528.jpg,4109, World,37.0,6.914330219487397e-13,18,236778,2,65.0,1,-28.0,2nd World War,2nd world war,1,0
+gemma,okvqa_val_00756,local_context_inference,wrong_image,ok,,What war is this airplane associated with?,world war 2,COCO_val2014_000000036528.jpg,14447,World,28.5,1.591383247401268e-09,22,236778,2,48.75,1,-20.25,2nd World War,2nd world war,1,0
+gemma,okvqa_val_00912,local_context_inference,clean,ok,,How do we know there may be a railroad nearby?,sign,COCO_val2014_000000245481.jpg,10150,Sign,13.6875,6.4734360645011895e-18,2725,432,�,53.25,1,-39.5625,The presence,the presence,1,0
+gemma,okvqa_val_00912,local_context_inference,wrong_image,ok,,How do we know there may be a railroad nearby?,sign,COCO_val2014_000000245481.jpg,10150,Sign,20.625,1.0290224618583754e-12,320,432,�,47.75,1,-27.125,The presence,the presence,1,0
+gemma,okvqa_val_01938,local_context_inference,clean,ok,,Name the bike model shown in this picture?,bmw,COCO_val2014_000000356263.jpg,146450, bmw,25.875,3.077473253227372e-19,80,236778,2,68.5,1,-42.625,2013,2013,1,0
+gemma,okvqa_val_01938,local_context_inference,wrong_image,ok,,Name the bike model shown in this picture?,bmw,COCO_val2014_000000356263.jpg,17147,bm,17.5,7.012378416652865e-14,1819,236800,3,47.5,1,-30.0,3AW.,3aw,1,0

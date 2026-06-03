@@ -1,0 +1,9 @@
+model_family,sample_type,n,composition_effect_margin_mean,composition_effect_rank_mean,multi_evidence_supported_count,blocked_count
+gemma,relation_reasoning,5,-5.859375,-19014.6,0,1
+gemma,local_context_inference,4,-2.890625,-645.0,0,0
+gemma,comparison_reasoning,5,-2.9,-298.6,0,0
+gemma,text_object_binding,1,3.375,2437.0,1,0
+qwen,relation_reasoning,5,-0.05,28.0,2,0
+qwen,local_context_inference,4,-1.859375,-1.0,0,0
+qwen,comparison_reasoning,5,0.41875,8.2,1,0
+qwen,text_object_binding,1,-0.375,17.0,0,0

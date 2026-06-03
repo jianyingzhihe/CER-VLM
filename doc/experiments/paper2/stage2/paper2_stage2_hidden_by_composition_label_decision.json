@@ -1,0 +1,8 @@
+{
+  "created_at": "2026-06-03 11:54:11",
+  "status": "paper2_stage2_composition_label_join_ready",
+  "label_path": "E:\\Bridging\\doc\\experiments\\paper2\\stage1\\composition_effect_by_sample_mask_full_v1.csv",
+  "joined_rows": 304,
+  "summary_rows": 4,
+  "interpretation": "Use mask-composition labels as Paper2 sample strata; do not treat all wrong-image-sensitive cases as compositional."
+}

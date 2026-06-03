@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-06-03 11:22:50",
+  "status": "paper2_stage2_hidden_prompt_runs_ready",
+  "selection": "union",
+  "selected_samples": [
+    "okvqa_val_00310",
+    "okvqa_val_00893",
+    "okvqa_val_02108",
+    "okvqa_val_1295955",
+    "okvqa_val_258605"
+  ],
+  "rows": 5,
+  "prompt_runs": "E:\\Bridging\\doc\\experiments\\paper2\\stage2\\paper2_stage2_hidden_union_strong_prompt_runs.csv",
+  "asset_root": "E:\\Bridging\\paper2_compositional_evidence_routing\\annotation\\stage2_hidden_lens_assets_v1",
+  "mask_mapping": {
+    "answer.png": "region_A_union_B.png",
+    "union.png": "region_A_union_B.png",
+    "shifted.png": "random_union_size.png",
+    "shuffled.png": "random_union_size.png"
+  }
+}

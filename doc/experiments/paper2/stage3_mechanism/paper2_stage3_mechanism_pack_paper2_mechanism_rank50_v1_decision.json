@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-06-03 12:14:56",
+  "tag": "paper2_mechanism_rank50_v1",
+  "status": "paper2_stage3_mechanism_pack_ready",
+  "qwen_rows": 3,
+  "gemma_rows": 1,
+  "qwen_samples": [
+    "okvqa_val_00310",
+    "okvqa_val_00893",
+    "okvqa_val_258605"
+  ],
+  "gemma_samples": [
+    "okvqa_val_1295955"
+  ],
+  "missing": [],
+  "asset_root": "E:\\Bridging\\paper2_compositional_evidence_routing\\annotation\\stage3_mechanism_assets_v1",
+  "mask_mapping": {
+    "answer.png": "A/B union evidence mask from Paper2 Stage2 hidden assets",
+    "union.png": "same union evidence mask",
+    "shifted.png": "random/same-area control from Paper2 Stage2 hidden assets",
+    "shuffled.png": "random/same-area control from Paper2 Stage2 hidden assets"
+  }
+}

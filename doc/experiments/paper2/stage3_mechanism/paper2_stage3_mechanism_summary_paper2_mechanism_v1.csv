@@ -1,0 +1,8 @@
+model,lens,stage1_label,rows,samples,positive_frac,clean_source_minus_controls_mean,rank_effect_mean,real_minus_shifted_mean,real_minus_shuffled_mean,real_source_effect_mean,real_target_minus_wrong_mean,score_mean,target_effect_mean,wrong_effect_mean
+gemma,hidden_restore,multi_evidence_supported,16,1,0.75,,3366.75,,,,,,2.8984375,
+gemma,hidden_restore,one_region_dominated,48,3,0.5625,,3856.5416666666665,,,,,,2.8728129069010415,
+qwen,hidden_restore,multi_evidence_supported,144,3,0.9097222222222222,,69.11805555555556,,,,,,1.2391493055555556,
+qwen,hidden_restore,one_region_dominated,96,2,0.4583333333333333,,1.8125,,,,,,-0.24348958333333334,
+qwen,plt_candidate_discovery,multi_evidence_supported,48,2,1.0,,,,,,,0.9862678292633805,,
+qwen,plt_feature_zeroing_restore,multi_evidence_supported,6,2,0.8333333333333334,0.03472222222222222,,0.010416666666666666,0.010416666666666666,0.020833333333333332,0.03125,,,
+qwen,plt_group_restore,multi_evidence_supported,144,2,0.75,,0.4444444444444444,,,,0.007378472222222222,,-0.014322916666666666,-0.021701388888888888

@@ -1,0 +1,5 @@
+model,stage1_label,target_rows,sample_count,target_effect_mean,target_positive_frac,target_minus_wrong_mean,rank_effect_mean
+gemma,multi_evidence_supported,16,1,2.8984375,0.75,3.1328125,3366.75
+gemma,one_region_dominated,48,3,2.8728129069010415,0.5625,5.414479573567708,3856.5416666666665
+qwen,multi_evidence_supported,144,3,1.2391493055555556,0.7847222222222222,-0.6605902777777778,69.11805555555556
+qwen,one_region_dominated,96,2,-0.24348958333333334,0.4375,-0.20963541666666666,1.8125

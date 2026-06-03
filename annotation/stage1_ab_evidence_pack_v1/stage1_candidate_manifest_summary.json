@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-06-03 00:00:41",
+  "status": "annotation_pack_ready",
+  "pack_dir": "E:\\Bridging\\paper2_compositional_evidence_routing\\annotation\\stage1_ab_evidence_pack_v1",
+  "candidate_count": 40,
+  "source_paths": [
+    "E:\\Bridging\\annotation\\okvqa_type_label_round4_400_mobile_package\\manifest.csv",
+    "E:\\Bridging\\annotation\\okvqa_type_label_round3_320\\manifest.csv",
+    "E:\\Bridging\\annotation\\okvqa_type_label_round4_400\\manifest.csv"
+  ],
+  "sample_types": {
+    "relation_reasoning": 10,
+    "comparison_reasoning": 10,
+    "text_object_binding": 10,
+    "local_context_inference": 10
+  },
+  "legacy_visual_types": {
+    "multi_region": 11,
+    "localized": 16,
+    "": 13
+  }
+}

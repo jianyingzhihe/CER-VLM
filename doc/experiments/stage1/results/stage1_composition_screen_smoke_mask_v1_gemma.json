@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-06-03 11:44:06",
+  "script": "run_paper2_stage1_behavior_screen.py",
+  "args": {
+    "model_family": "gemma",
+    "model_name": "/root/autodl-tmp/tca-reasoning/data/hf_cache/hub/models--google--gemma-3-4b-it/snapshots/093f9f388b31de276ce2de164bdc2081324b9767",
+    "manifest": "/root/autodl-tmp/tca-reasoning/paper2_stage1_composition/stage1_composition_screen_smoke_mask_v1_manifest.csv",
+    "image_root": "/root/autodl-tmp/tca-reasoning/paper2_stage1_composition/assets/images",
+    "mask_root": "/root/autodl-tmp/tca-reasoning/paper2_stage1_composition/assets/exported_masks",
+    "conditions": "clean,mask_A,mask_B,mask_A_union_B,random_A_size,random_B_size,random_union_size,wrong_image",
+    "max_rows": 5,
+    "max_new_tokens": 4,
+    "answer_prefix": "The answer is ",
+    "out_csv": "/root/autodl-tmp/tca-reasoning/paper2_stage1_composition/stage1_composition_screen_smoke_mask_v1_gemma.csv",
+    "out_json": "/root/autodl-tmp/tca-reasoning/paper2_stage1_composition/stage1_composition_screen_smoke_mask_v1_gemma.json"
+  },
+  "row_count": 5,
+  "conditions": [
+    "clean",
+    "mask_A",
+    "mask_B",
+    "mask_A_union_B",
+    "random_A_size",
+    "random_B_size",
+    "random_union_size",
+    "wrong_image"
+  ],
+  "status": "completed",
+  "output_rows": 40,
+  "ok_rows": 40,
+  "blocked_rows": 0,
+  "completed_at": "2026-06-03 11:44:42"
+}
